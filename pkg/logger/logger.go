@@ -27,7 +27,7 @@ import (
 	"go.uber.org/zap/zapcore"
 	"gopkg.in/natefinch/lumberjack.v2"
 
-	"github.com/aws-observability/aws-otel-collector/pkg/extraconfig"
+	"github.com/Moonlighting-Industries/aws-otel-collector/pkg/extraconfig"
 )
 
 var (

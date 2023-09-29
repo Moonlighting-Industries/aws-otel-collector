@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/aws-observability/aws-otel-collector/pkg/defaultcomponents"
+	"github.com/Moonlighting-Industries/aws-otel-collector/pkg/defaultcomponents"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/testbed/correctnesstests"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/testbed/testbed"
 	"github.com/stretchr/testify/require"

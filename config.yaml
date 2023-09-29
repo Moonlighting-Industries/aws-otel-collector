@@ -1,37 +1,34 @@
 extensions:
   health_check:
+  iotauth:
 
 receivers:
   otlp:
     protocols:
       grpc:
         endpoint: 0.0.0.0:4317
+        auth:
+          authenticator: iotauth
       http:
         endpoint: 0.0.0.0:4318
-  awsxray:
-    endpoint: 0.0.0.0:2000
-    transport: udp
+        auth:
+          authenticator: iotauth
 
 processors:
-  batch/traces:
-    timeout: 1s
-    send_batch_size: 50
   batch/metrics:
     timeout: 60s
 
 exporters:
-  awsxray:
-  awsemf:
+  logging:
 
 service:
   pipelines:
-    traces:
-      receivers: [otlp,awsxray]
-      processors: [batch/traces]
-      exporters: [awsxray]
     metrics:
       receivers: [otlp]
       processors: [batch/metrics]
-      exporters: [awsemf]
+      exporters: [logging]
+    logs:
+      receivers: [otlp]
+      exporters: [logging]
 
-  extensions: [health_check]
+  extensions: [iotauth, health_check]

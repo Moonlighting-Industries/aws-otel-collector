@@ -28,11 +28,11 @@ import (
 	"go.opentelemetry.io/collector/component"
 	"go.uber.org/zap"
 
-	"github.com/aws-observability/aws-otel-collector/pkg/config"
-	"github.com/aws-observability/aws-otel-collector/pkg/defaultcomponents"
-	"github.com/aws-observability/aws-otel-collector/pkg/extraconfig"
-	"github.com/aws-observability/aws-otel-collector/pkg/logger"
-	"github.com/aws-observability/aws-otel-collector/tools/version"
+	"github.com/Moonlighting-Industries/aws-otel-collector/pkg/config"
+	"github.com/Moonlighting-Industries/aws-otel-collector/pkg/defaultcomponents"
+	"github.com/Moonlighting-Industries/aws-otel-collector/pkg/extraconfig"
+	"github.com/Moonlighting-Industries/aws-otel-collector/pkg/logger"
+	"github.com/Moonlighting-Industries/aws-otel-collector/tools/version"
 )
 
 const (

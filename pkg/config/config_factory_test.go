@@ -30,7 +30,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.opentelemetry.io/collector/component"
 
-	"github.com/aws-observability/aws-otel-collector/pkg/defaultcomponents"
+	"github.com/Moonlighting-Industries/aws-otel-collector/pkg/defaultcomponents"
 )
 
 func getValidTestConfigPath() string {

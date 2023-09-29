@@ -16,6 +16,7 @@
 package defaultcomponents // import "aws-observability.io/collector/defaultcomponents
 
 import (
+	"github.com/Moonlighting-Industries/moon_telemetry/extension/iotauthextension"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsemfexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsxrayexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/datadogexporter"
@@ -82,6 +83,7 @@ func Components() (otelcol.Factories, error) {
 		sigv4authextension.NewFactory(),
 		zpagesextension.NewFactory(),
 		ballastextension.NewFactory(),
+		iotauthextension.NewFactory(),
 	}
 	extensions, err := extension.MakeFactoryMap(extensionsList...)
 
