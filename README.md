@@ -118,3 +118,41 @@ If you discover a potential security issue in this project we ask that you notif
 ### License
 
 ADOT Collector is licensed under an Apache 2.0 license.
+
+## Moon Specific
+
+The purpose of this fork is mainly to add components to base ADOT collector. To do so, import the component and add it to a relevant factory in `pkg/defaultcomponents/defaults.go`.
+
+These are the current Moon specific components.
+
+| Receiver                                                                                                                                                | Processor                                                                                                                                                                             | Exporter                                                                                                                                                                             | Extensions                                                                                                                                      |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| | | | [iotauthextension](https://github.com/Moonlighting-Industries/moon_telemetry/tree/main/extension/iotauthextension) |
+
+### Deployment
+
+**Setup Docker image**
+
+```
+make build-docker
+
+
+```
+
+**Deploy to ECS**
+
+```
+aws cloudformation update-stack \
+  --stack-name MOONADOTECS-${ClusterName}-${Region} \
+  --template-body file://<PATH_TO_CloudFormation_TEMPLATE> \
+  --parameters ParameterKey=KeyName,ParameterValue=YourKeyName \
+               ParameterKey=InstanceType,ParameterValue=YourInstanceType \
+               ParameterKey=InstanceAMI,ParameterValue=YourAMI \
+               ParameterKey=IAMRole,ParameterValue=YourIAMRole \
+               ParameterKey=SSHLocation,ParameterValue=YourSSHLocation
+
+```
+
+### Version Handling
+
+Update the release tags to whichever version is latest when rebasing the fork (create a new release in github and set the tag equal to the latest release in the aws-otel-collector repo). For moon specific changes, such as adding components, I don't think new releases are needed.

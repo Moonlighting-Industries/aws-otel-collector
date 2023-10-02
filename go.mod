@@ -3,7 +3,7 @@ module github.com/Moonlighting-Industries/aws-otel-collector
 go 1.21.1
 
 require (
-	github.com/Moonlighting-Industries/moon_telemetry/extension/iotauthextension v0.0.0
+	github.com/Moonlighting-Industries/moon_telemetry/extension/iotauthextension
 	github.com/open-telemetry/opentelemetry-collector-contrib/confmap/provider/s3provider v0.85.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsemfexporter v0.85.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsxrayexporter v0.85.0
