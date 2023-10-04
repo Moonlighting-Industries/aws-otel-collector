@@ -131,28 +131,19 @@ These are the current Moon specific components.
 
 ### Deployment
 
-**Setup Docker image**
+**Setup Docker Image**
 
 ```
-make build-docker
-
-
+ECR_URL=<ECR Address>
+DOCKER_NAMESPACE=$ECR_URL make docker-build
+aws ecr get-login-password --region eu-central-1 --profile jonathanT | docker login --username AWS --password-stdin $ECR_URL 
+docker push $ECR_URL/awscollector:$(cat VERSION)
 ```
 
 **Deploy to ECS**
 
-```
-aws cloudformation update-stack \
-  --stack-name MOONADOTECS-${ClusterName}-${Region} \
-  --template-body file://<PATH_TO_CloudFormation_TEMPLATE> \
-  --parameters ParameterKey=KeyName,ParameterValue=YourKeyName \
-               ParameterKey=InstanceType,ParameterValue=YourInstanceType \
-               ParameterKey=InstanceAMI,ParameterValue=YourAMI \
-               ParameterKey=IAMRole,ParameterValue=YourIAMRole \
-               ParameterKey=SSHLocation,ParameterValue=YourSSHLocation
-
-```
+AWS App Runner automatically updates the Collector instance when a new Docker image is pushed to the awscolletor ECR repository
 
 ### Version Handling
 
-Update the release tags to whichever version is latest when rebasing the fork (create a new release in github and set the tag equal to the latest release in the aws-otel-collector repo). For moon specific changes, such as adding components, I don't think new releases are needed.
+Simply update the github and docker tags when pushing new changes.
