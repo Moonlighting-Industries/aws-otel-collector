@@ -131,12 +131,26 @@ These are the current Moon specific components.
 
 ### Deployment
 
+**GO iotauthextension Access**
+
+The iotauthextension module is in a private repo and thus GO needs special access. 
+Run this command
+
+```
+go env -w GOPRIVATE=github.com/Moonlighting-Industries/moon_telemetry/extension/*
+
+git config --global url."ssh://git@github.com".insteadOf "https://github.com"
+```
+
 **Setup Docker Image**
 
 ```
 ECR_URL=<ECR Address>
+
 DOCKER_NAMESPACE=$ECR_URL make docker-build
+
 aws ecr get-login-password --region eu-central-1 --profile jonathanT | docker login --username AWS --password-stdin $ECR_URL 
+
 docker push $ECR_URL/awscollector:$(cat VERSION)
 ```
 

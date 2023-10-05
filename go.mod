@@ -3,7 +3,6 @@ module github.com/Moonlighting-Industries/aws-otel-collector
 go 1.21.1
 
 require (
-	github.com/Moonlighting-Industries/moon_telemetry/extension/iotauthextension v0.1.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/confmap/provider/s3provider v0.85.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsemfexporter v0.85.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsxrayexporter v0.85.0
@@ -109,6 +108,7 @@ require (
 	github.com/GoogleCloudPlatform/opentelemetry-operations-go/detectors/gcp v1.19.1 // indirect
 	github.com/IBM/sarama v1.41.1 // indirect
 	github.com/Microsoft/go-winio v0.6.1 // indirect
+	github.com/Moonlighting-Industries/moon_telemetry/extension/iotauthextension v0.0.0-20231004140404-bf5476aab2e8 // indirect
 	github.com/Showmax/go-fqdn v1.0.0 // indirect
 	github.com/alecthomas/participle/v2 v2.0.0 // indirect
 	github.com/alecthomas/units v0.0.0-20211218093645-b94a6e3cc137 // indirect
