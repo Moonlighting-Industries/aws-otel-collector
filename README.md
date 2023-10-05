@@ -131,9 +131,9 @@ These are the current Moon specific components.
 
 ### Deployment
 
-**GO iotauthextension Access**
+**Private Repo Access**
 
-The iotauthextension module is in a private repo and thus GO needs special access. 
+The custom extension modules are in a private repo and thus GO needs special access. 
 Run this command
 
 ```
