@@ -3,7 +3,7 @@ module github.com/Moonlighting-Industries/aws-otel-collector/testbed
 go 1.21.1
 
 require (
-	github.com/Moonlighting-Industries/aws-otel-collector v0.33.2
+	github.com/Moonlighting-Industries/aws-otel-collector v0.33.1
 	github.com/open-telemetry/opentelemetry-collector-contrib/testbed v0.85.0
 	github.com/stretchr/testify v1.8.4
 	go.opentelemetry.io/collector/pdata v1.0.0-rcv0015
