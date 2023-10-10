@@ -4,3 +4,7 @@ This directory contains end to end testcases based on the [testbed framework](ht
 
 Each sub directory in this directory should contain testcases for specific components. For example, in the
 `sampling` directory, we are storing testcases for the Group by Trace and Tail Sampling processors.
+
+# Fork
+
+Not maintained for the fork

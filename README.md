@@ -119,7 +119,7 @@ If you discover a potential security issue in this project we ask that you notif
 
 ADOT Collector is licensed under an Apache 2.0 license.
 
-## Moon Specific
+# Fork
 
 The purpose of this fork is mainly to add components to base ADOT collector. To do so, import the component and add it to a relevant factory in `pkg/defaultcomponents/defaults.go`.
 
@@ -157,7 +157,3 @@ docker push $ECR_URL/awscollector:$(cat VERSION)
 **Deploy to ECS**
 
 AWS App Runner automatically updates the Collector instance when a new Docker image is pushed to the awscolletor ECR repository
-
-### Version Handling
-
-Simply update the github and docker tags when pushing new changes.
