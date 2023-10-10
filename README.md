@@ -149,7 +149,7 @@ ECR_URL=<ECR Address>
 
 DOCKER_NAMESPACE=$ECR_URL make docker-build
 
-aws ecr get-login-password --region eu-central-1 --profile jonathanT | docker login --username AWS --password-stdin $ECR_URL 
+aws ecr get-login-password --region eu-central-1 --profile <Your Profile> | docker login --username AWS --password-stdin $ECR_URL 
 
 docker push $ECR_URL/awscollector:$(cat VERSION)
 ```
