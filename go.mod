@@ -3,7 +3,7 @@ module github.com/Moonlighting-Industries/aws-otel-collector
 go 1.21.1
 
 require (
-	github.com/Moonlighting-Industries/moon_telemetry/extension/iotauthextension v0.0.0-20231004140404-bf5476aab2e8
+	github.com/Moonlighting-Industries/moon_telemetry/extension/iotauthextension v0.0.0-20231011140726-3dfaa480e3b2
 	github.com/open-telemetry/opentelemetry-collector-contrib/confmap/provider/s3provider v0.85.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsemfexporter v0.85.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsxrayexporter v0.85.0
@@ -455,3 +455,5 @@ replace github.com/openshift/api v3.9.0+incompatible => github.com/openshift/api
 replace github.com/DataDog/datadog-agent/pkg/proto => github.com/DataDog/datadog-agent/pkg/proto v0.48.0-beta.1
 
 replace github.com/DataDog/datadog-agent/pkg/trace => github.com/DataDog/datadog-agent/pkg/trace v0.48.0-beta.1
+
+replace github.com/Moonlighting-Industries/moon_telemetry/extension/iotauthextension => /home/moon-dev/develop/moon_telemetry/extension/iotauthextension
