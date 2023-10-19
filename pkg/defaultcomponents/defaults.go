@@ -19,6 +19,7 @@ import (
 	"github.com/Moonlighting-Industries/moon_telemetry/extension/iotauthextension"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsemfexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsxrayexporter"
+	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awscloudwatchlogsexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/datadogexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/dynatraceexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/fileexporter"
@@ -135,6 +136,7 @@ func Components() (otelcol.Factories, error) {
 	// enable the selected exporters
 	exporterList := []exporter.Factory{
 		awsemfexporter.NewFactory(),
+		awscloudwatchlogsexporter.NewFactory(),
 		prometheusremotewriteexporter.NewFactory(),
 		prometheusexporter.NewFactory(),
 		fileexporter.NewFactory(),

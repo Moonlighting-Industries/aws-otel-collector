@@ -5,6 +5,7 @@ go 1.21.1
 require (
 	github.com/Moonlighting-Industries/moon_telemetry/extension/iotauthextension v0.0.0-20231012154221-d563c06514df
 	github.com/open-telemetry/opentelemetry-collector-contrib/confmap/provider/s3provider v0.85.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awscloudwatchlogsexporter v0.85.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsemfexporter v0.85.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsxrayexporter v0.85.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/datadogexporter v0.85.0

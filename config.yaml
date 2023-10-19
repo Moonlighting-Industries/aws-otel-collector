@@ -20,6 +20,12 @@ processors:
 
 exporters:
   logging:
+  awscloudwatchlogs:
+    log_group_name: "moon-device"
+    log_stream_name: "moon-logs"
+    raw_log: true
+    region: "eu-central-1"
+    log_retention: 7
 
 service:
   pipelines:
@@ -29,6 +35,6 @@ service:
       exporters: [logging]
     logs:
       receivers: [otlp]
-      exporters: [logging]
+      exporters: [logging, awscloudwatchlogs]
 
   extensions: [iotauth, health_check]
