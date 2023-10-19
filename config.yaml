@@ -1,6 +1,7 @@
 extensions:
   health_check:
   iotauth:
+    region: eu-north-1
 
 receivers:
   otlp:
