@@ -26,7 +26,7 @@ exporters:
     log_stream_name: "moon-logs"
     raw_log: true
     region: "eu-central-1"
-    log_retention: 182
+    log_retention: 180
 
 service:
   pipelines:
