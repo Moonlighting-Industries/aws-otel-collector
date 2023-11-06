@@ -27,15 +27,17 @@ exporters:
     raw_log: true
     region: "eu-central-1"
     log_retention: 180
+  awsemf:
+    log_retention: 1
 
 service:
   pipelines:
     metrics:
       receivers: [otlp]
       processors: [batch/metrics]
-      exporters: [logging]
+      exporters: [awsemf]
     logs:
       receivers: [otlp]
-      exporters: [logging, awscloudwatchlogs]
+      exporters: [awscloudwatchlogs]
 
   extensions: [iotauth, health_check]
