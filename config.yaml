@@ -28,7 +28,7 @@ exporters:
     region: "eu-central-1"
     log_retention: 180
   awsemf:
-    log_retention: 1
+    log_retention: 180
 
 service:
   pipelines:
